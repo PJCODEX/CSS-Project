@@ -15,10 +15,6 @@ PhotoHorizon is a clean and modern photo gallery website built using pure HTML a
 - HTML5
 - CSS3
 - Google Fonts (optional)
-- Font Awesome (optional)
-
-## 📂 Project Structure
-
 
 ## 📸 Screenshots
 
