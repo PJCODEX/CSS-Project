@@ -24,4 +24,4 @@ PhotoHorizon is a clean and modern photo gallery website built using pure HTML a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/PhotoHorizon.git
+   git clone https://github.com/PJCODEX/PhotoHorizon.git
