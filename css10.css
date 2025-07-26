@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -8,42 +9,47 @@
   background-image: url("photo.jpg");
   height: 100vh;
   background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
+/* Hamburger Menu Icon */
 .btn_one i {
   color: white;
   font-size: 30px;
   font-weight: 700;
   position: absolute;
   left: 16px;
-  line-height: 60px;
+  top: 16px;
   cursor: pointer;
+  z-index: 1001;
 }
 
+/* Sidebar */
 .sidebar_menu {
   position: fixed;
-  left: -350px;
+  top: 0;
+  left: -100%;
   height: 100vh;
   width: 300px;
+  max-width: 80%;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
-  transition: all 0.2s linear;
-
-  /* Making scrollable */
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
   overflow-y: auto;
 }
 
 .sidebar_menu .logo {
-  position: absolute;
+  position: relative;
   width: 100%;
+  height: 60px;
   line-height: 60px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
-  height: 60px;
+  padding-left: 20px;
 }
 
 .sidebar_menu .logo a {
-  position: absolute;
-  left: 60px;
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -53,63 +59,57 @@
 .sidebar_menu .btn_two i {
   color: grey;
   font-size: 25px;
-  line-height: 60px;
   position: absolute;
-  left: 275px;
+  top: 18px;
+  right: 20px;
   cursor: pointer;
 }
 
 .sidebar_menu .menu {
-  position: absolute;
   width: 100%;
-  top: 80px;
+  padding-top: 20px;
+}
+
+.sidebar_menu .menu ul {
+  list-style: none;
 }
 
 .sidebar_menu .menu li {
-  margin: 6px;
-  padding: 14px 20px;
+  margin: 6px 0;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar_menu .menu i,
 .sidebar_menu .menu a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sidebar_menu .menu i {
-  padding-right: 8px;
+  margin-right: 10px;
 }
 
+.sidebar_menu .menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* Social Media */
 .sidebar_menu .social_media {
-  color: white;
-  opacity: 0.5;
-  position: absolute;
-  left: 25%;
-  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  opacity: 0.6;
 }
 
 .sidebar_menu .social_media i {
   color: white;
-  opacity: 0.5;
-  padding: 0 5px;
-}
-
-#check {
-  display: none;
-}
-
-.sidebar_menu .menu li:hover {
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-}
-
-.btn_one i:hover {
-  font-size: 40px;
-  transition: all 0.2s linear;
-}
-
-.btn_two i:hover {
-  font-size: 30px;
+  font-size: 20px;
+  transition: 0.2s;
 }
 
 .sidebar_menu .social_media i:hover {
@@ -117,6 +117,12 @@
   transform: scale(1.1);
 }
 
+/* Hide the checkbox input */
+#check {
+  display: none;
+}
+
+/* Toggle Sidebar Visibility */
 #check:checked ~ .sidebar_menu {
   left: 0;
 }
@@ -125,24 +131,14 @@
   opacity: 0;
 }
 
-#check:checked ~ .sidebar_menu.btn_two i {
-  opacity: 1;
-}
-
-/* Mobile Responsive Enhancements */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 480px) {
   .sidebar_menu {
     width: 80%;
-    left: -100%;
   }
 
-  .sidebar_menu .btn_two i {
-    left: calc(80% - 25px);
-  }
-
-  .sidebar_menu .logo a {
-    left: 20px;
-    font-size: 18px;
+  .sidebar_menu .menu li {
+    padding: 10px 16px;
   }
 
   .sidebar_menu .menu i,
@@ -150,26 +146,23 @@
     font-size: 16px;
   }
 
-  .sidebar_menu .menu li {
-    padding: 12px 16px;
-  }
-
-  .sidebar_menu .social_media {
-    left: 20%;
-    bottom: 30px;
-  }
-
-  .sidebar_menu .social_media i {
+  .sidebar_menu .logo a {
     font-size: 18px;
   }
 
   .btn_one i {
     font-size: 26px;
-    line-height: 50px;
   }
 
-  .main_box {
-    background-position: center;
-    background-size: cover;
+  .sidebar_menu .btn_two i {
+    font-size: 22px;
+  }
+
+  .sidebar_menu .social_media {
+    gap: 10px;
+  }
+
+  .sidebar_menu .social_media i {
+    font-size: 18px;
   }
 }
