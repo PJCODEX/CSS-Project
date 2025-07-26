@@ -137,7 +137,7 @@
   .main_box {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     background-color: black; 
   }
   
