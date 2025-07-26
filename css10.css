@@ -133,6 +133,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  
+  .main_box {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: black; 
+  }
+  
   .sidebar_menu {
     width: 80%;
   }
