@@ -135,7 +135,7 @@
 @media (max-width: 768px) {
   
   .main_box {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black; 
